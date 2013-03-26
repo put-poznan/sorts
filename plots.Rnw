@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage{color}
+\usepackage[usenames,dvipsnames,x11names,table]{xcolor}
+
+\begin{document}
+\setkeys{Gin}{width=\textwidth}
+
+Na wszystkich wykresach poniżej zastosowano następującą kolorystykę:
+\begin{itemize}
+  \item \textcolor{black}{sortowanie przez wybór}
+  \item \textcolor{red}{sortowanie przez wstawianie}
+  \item \textcolor{Green}{sortowanie Shell'a}
+  \item \textcolor{blue}{sortowanie przez kopcowanie}
+  \item \textcolor{Gold4}{quicksort z wyborem pierwszego elementu}
+  \item \textcolor{orange}{quicksort z wyborem losowego elementu}
+\end{itemize}
+
+\section{Losowe}
+<<echo=FALSE,fig=TRUE>>=
+  selection  <- read.table('out/random_selection')
+  insertion  <- read.table('out/random_insertion')
+  shell      <- read.table('out/random_shell')
+  heap       <- read.table('out/random_heap')
+  quick_left <- read.table('out/random_quick_left')
+  quick_rand <- read.table('out/random_quick_rand')
+  plot(selection, type = 'l', log = 'y', xlab = 'Ilość elementów', ylab = 'Czas', yaxt = 'n', ylim = range(1e7:3e8))
+  lines(insertion, col = 'red')
+  lines(shell,     col = 'chartreuse4')
+  lines(heap,      col = 'blue')
+  lines(quick_left,col = 'gold4')
+  lines(quick_rand,col = 'orange')
+@
+
+\section{Posortowane}
+<<echo=FALSE,fig=TRUE>>=
+  selection  <- read.table('out/sorted_selection')
+  insertion  <- read.table('out/sorted_insertion')
+  shell      <- read.table('out/sorted_shell')
+  heap       <- read.table('out/sorted_heap')
+  quick_left <- read.table('out/sorted_quick_left')
+  quick_rand <- read.table('out/sorted_quick_rand')
+  plot(selection, type = 'l', log = 'y', xlab = 'Ilość elementów', ylab = 'Czas', yaxt = 'n', ylim = range(1e7:3e8))
+  lines(insertion, col = 'red')
+  lines(shell,     col = 'chartreuse4')
+  lines(heap,      col = 'blue')
+  lines(quick_left,col = 'gold4')
+  lines(quick_rand,col = 'orange')
+@
+
+\section{Odwrotnie posortowane}
+<<echo=FALSE,fig=TRUE>>=
+  selection  <- read.table('out/reversed_selection')
+  insertion  <- read.table('out/reversed_insertion')
+  shell      <- read.table('out/reversed_shell')
+  heap       <- read.table('out/reversed_heap')
+  quick_left <- read.table('out/reversed_quick_left')
+  quick_rand <- read.table('out/reversed_quick_rand')
+  plot(selection, type = 'l', log = 'y', xlab = 'Ilość elementów', ylab = 'Czas', yaxt = 'n', ylim = range(1e7:3e8))
+  lines(insertion, col = 'red')
+  lines(shell,     col = 'chartreuse4')
+  lines(heap,      col = 'blue')
+  lines(quick_left,col = 'gold4')
+  lines(quick_rand,col = 'orange')
+@
+
+\section{V kształtne}
+<<echo=FALSE,fig=TRUE>>=
+  selection  <- read.table('out/vshaped_selection')
+  insertion  <- read.table('out/vshaped_insertion')
+  shell      <- read.table('out/vshaped_shell')
+  heap       <- read.table('out/vshaped_heap')
+  quick_left <- read.table('out/vshaped_quick_left')
+  quick_rand <- read.table('out/vshaped_quick_rand')
+  plot(selection, type = 'l', log = 'y', xlab = 'Ilość elementów', ylab = 'Czas', yaxt = 'n', ylim = range(1e7:3e8))
+  lines(insertion, col = 'red')
+  lines(shell,     col = 'chartreuse4')
+  lines(heap,      col = 'blue')
+  lines(quick_left,col = 'gold4')
+  lines(quick_rand,col = 'orange')
+@
+
+\end{document}
