@@ -23,6 +23,6 @@ test: all data test.sh
 	./test.sh
 
 clean:
-	rm -r $(EXEC) out data
+	rm -r $(EXEC) out data $(PDF)
 
-report: $(PDF)
+report: test $(PDF)
