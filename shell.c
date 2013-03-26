@@ -34,5 +34,7 @@ int main(int argc, char* argv[]) {
 
   shell_sort(arr, size);
 
+  free(arr);
+
   return 0;
 }

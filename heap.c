@@ -43,6 +43,8 @@ int main(int argc, char* argv[]) {
 
   heap_sort(arr, size);
 
+  free(arr);
+
   return 0;
 }
 

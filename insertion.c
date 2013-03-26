@@ -28,5 +28,7 @@ int main(int argc, char* argv[]) {
 
   insertion_sort(arr, size);
 
+  free(arr);
+
   return 0;
 }

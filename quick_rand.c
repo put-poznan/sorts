@@ -37,6 +37,8 @@ int main(int argc, char* argv[]) {
 
   quick_sort(arr, size);
 
+  free(arr);
+
   return 0;
 }
 

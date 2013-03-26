@@ -28,6 +28,8 @@ int main(int argc, char* argv[]) {
 
   selection_sort(arr, size);
 
+  free(arr);
+
   return 0;
 }
 
