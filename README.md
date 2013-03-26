@@ -37,6 +37,28 @@ By przetestować pojedynczy algorytm należy wykonać polecenie:
 
     $ ./test.sh <nazwa programu>
 
+### Jak odpalić by nie upiec kompa?
+
+Polecam zalogować się przez SSH na serwerze PP, do którego jesteśmy przypisani, np.:
+
+    $ ssh inf109706@polluks.cs.put.poznan.pl
+
+Sklonować to repozytorium:
+
+    $ git clone https://github.com/put-poznan/sorts.git
+
+Odpalić GNU Screen
+
+    $ screen
+
+Przejść do odpowiedniego katalogu i odpalić:
+
+    $ make test | mail -s Zakończono twój@adres.email.pl
+
+Wcisnąć kombinację klawiszy Control-a d co spowoduje odłączenie się danej konsoli
+i można spokojnie opuścić sesję SSH. Gdy się skończy praca naszego skryptu otrzymamy
+maila zawierającego wyjście naszego generatora.
+
 ## Dodanie nowego algorytmu
 
 Wpierw należy utworzyć nowy plik z kodem o nazwie `<nazwa algorytmu>.c` i umieścić go
