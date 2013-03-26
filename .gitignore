@@ -1,0 +1,14 @@
+out/
+data/
+heap
+insertion
+quick_left
+selection
+shell
+plots-001.pdf
+plots-002.pdf
+plots-003.pdf
+plots-004.pdf
+plots.pdf
+quick_rand
+plots.tex
