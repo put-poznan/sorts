@@ -20,7 +20,7 @@ data: generate.sh
 	./generate.sh
 
 test: all data test.sh
-	./test.sh
+	./test.sh $(EXEC)
 
 clean:
 	rm -r $(EXEC) out data $(PDF)

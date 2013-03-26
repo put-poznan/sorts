@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SORTS='heap insertion selection shell quick_left quick_rand'
+SORTS=$*
 TYPES='random reversed sorted vshaped'
 DATA='data'
 OUT='out'
