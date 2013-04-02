@@ -89,7 +89,7 @@ Po napisaniu kodu należy dodać dany kod do pliku `Makefile` na końcu linijki:
 ### Styl
 
 Używamy stylu K&R z podwójną spacją zamiast tablulacji. Zmienne i funkcje nazywać
-przy pomocy `small_caps_snake_case`, makra i stałe przy pomocy `BIG_CASE_SNAKE_CASE`.
+przy pomocy `small_snake_case`, makra i stałe przy pomocy `BIG_SNAKE_CASE`.
 Nie używać notacji węgierskiej czy innego badziewia.
 
 ## Generowanie raportu
